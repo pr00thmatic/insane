@@ -1,9 +1,11 @@
+//entropy!!
+
 #include <vector>
 #include <queue>
 #include <iostream>
 #include <cstdio>
 
-#define INFINITY ((1<<31)-1)
+#define INFINITY (1<<30)
 
 using namespace std;
 
@@ -21,37 +23,33 @@ void dijkstra(int start, vector<vector<pair<int, int> > > graph) {
       exploring.push(pair<int, int>(0, start));
 
       while(!exploring.empty()) {
-	    cout << " i'm exploring the node " << exploring.top().second << endl;
-	    if(exploring.top().second == 3)
-		  cout << "!!!!!!!! got the 3 !!!!!!" << endl;
+	    // cout << " i'm exploring the node " << exploring.top().second << endl;
 	    pair<int, int> front = exploring.top();
 	    exploring.pop();
 	    int father = front.second, weight = front.first;
 
-	    if(weight < distance[father]) { 
-		  cout << "oh, nvm, weight is smaller than distance... " 
-		       << weight << " < " << distance[father] << endl;
+	    if(weight > distance[father]) { 
+		  // cout << "oh, nvm, weight is bigger than distance... " 
+		  //      << weight << " < " << distance[father] << endl;
 		  continue;
 	    }
 
 	    for(int i=0; i<graph[father].size(); i++) {
 		  pair<int, int> son = graph[father][i];
 		  
-		  cout << "current distance from " << father
-		       << " to " << son.second << " is " 
-		       << distance[son.second] << endl;
+		  // cout << "current distance from " << father
+		  //      << " to " << son.second << " is " 
+		  //      << distance[son.second] << endl;
 
 		  if(distance[father] + son.first < distance[son.second]) {
-			cout << "it could be shortest..." << endl;
+			// cout << "it could be shortest..." << endl;
 			distance[son.second] = distance[father] + son.first;
 			parents[son.second] = father;
 			exploring.push(
 			      pair<int, int>(distance[son.second], son.second));
-			cout << "\tgoing to explore " << son.second
-			     << " btw, the new distance: " 
-			     << distance[son.second] << endl;
-			if(son.second == 3)
-			      cout << "!!!! got the 3!!!!!!!!" << endl;
+			// cout << "\tgoing to explore " << son.second
+			//      << " btw, the new distance: " 
+			//      << distance[son.second] << endl;
 		  }		  
 	    }
 

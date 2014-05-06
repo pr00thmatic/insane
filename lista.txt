@@ -1,0 +1,10 @@
+/home/vg/.gnupg/pubring.gpg
+---------------------------
+pub   2048R/566A63F4 2014-04-26
+uid                  Ruth Garcia <vengadoravg@gmail.com>
+sub   2048R/6AF2C402 2014-04-26
+
+pub   2048R/82727B33 2014-04-26
+uid                  Jhonatan Castro <jhtan@jhtan.com>
+sub   2048R/A47962D2 2014-04-26
+

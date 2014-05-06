@@ -1,0 +1,42 @@
+ 1188  gpg -v -fingerprint
+ 1189  gpg -v fingerprint
+ 1190  gpg -v
+ 1191  man gpg | less
+ 1192  gpg
+ 1193  gpg -v
+ 1194  gpg --list-keys
+ 1195  gpg --gen-key
+ 1197  gpg --list-keys
+ 1204  gpg -v --fingerprint
+ 1206  gpg --list-keys
+ 1207  gpg --keyserver=x-hkp://pgp.mit.edu -a --send-keys 566A63F4
+ 1211  emacs gpg.conf
+ 1212  gpg --search-keys 
+ 1213  gpg --search-keys
+ 1214  gpg -a --export
+ 1216  gpg --list-keys
+ 1217  gpg --keyserver=x-hkp://pgp.mit.edu -a --send-keys <key-ID>
+ 1218  gpg --keyserver=x-hkp://pgp.mit.edu -a --send-keys 566A63F4
+ 1219  gpg --search-keys
+ 1220  gpg --search-keys Ruth
+ 1221  gpg --search-keys 566A63F4
+ 1222  emacs ~/gpg-tutorial.how
+ 1223  gpg -v --list-keys
+ 1224  gpg --search-keys 566A63F4
+ 1225  gpg -a --export 566A63F4
+ 1226  gpg -a --export 566A63F4 > mypubkey.gpg
+ 1227  gpg --import mypubkey.gpg 
+ 1228  gpg -v --list-keys
+ 1233  gpg --import jhtangpgpub 
+ 1234  gpg --list-keys
+ 1235  gpg -a --export 566A63F4 > ruth.gpg
+ 1239  gpg --list-keysgpg --list-keys
+ 1240  gpg --list-keys
+ 1265  gpg --list-key > lista.gpg
+ 1266  emacs lista.gpg 
+ 1267  mv lista.gpg lista.txt
+ 1270  history | grep gpg
+ 1271  cat ~/.gnupg/gpg.conf 
+ 1272  emacs /home/vg/.gnupg/gpg.conf 
+ 1273  history | grep gpg
+ 1274  history | grep gpg > whathaveidone.log
