@@ -38,9 +38,8 @@ vector< vector<int> > countWaysCC(int n, vector<int> coins) {
      There is always one way to return 0 of change, with
      any coin: returning 0 coins.
   **/
-  for(int i=0; i<coins.size(); i++) {
+  for(int i=0; i<coins.size(); i++) 
     ways[0][i] = 1;
-  }
 
   /**
      There is only 1 way to give change to any quantity
@@ -48,11 +47,18 @@ vector< vector<int> > countWaysCC(int n, vector<int> coins) {
      quantity with coins of 1 penny. 
      (for l.6, reconsider 0 ways on giving the change).
 
-     !! i think your TODO is done !!
+     !! i think your TODO is done !! (l.59) :(
+
+     this only works if you have a coin with value 1...
+     
   **/
-  for(int i=0; i<n; i++) {
+
+  for(int i=1; i<n; i++) 
     ways[i][0] = 1;
-  }
+
+  // this doesnt works! the TODO is not done...
+//  for(int i=1; i<n; i+=coins[0]) 
+//      ways[i][0] = 1;
   
   /**
      And for every "c"oin, for every "s"olution...
@@ -104,7 +110,7 @@ void printMatrix(vector< vector<_tp> > M) {
 }
 
 int main() {
-  vector<int> coins = {1, 5, 10, 25, 50};
+  vector<int> coins = {2, 5, 10, 25, 50};
 
   vector< vector<int> > M;
   M = countWaysCC(20, coins);
